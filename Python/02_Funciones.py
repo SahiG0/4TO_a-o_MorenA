@@ -2,7 +2,7 @@ a=2
 b=5
 print(a)
 
-def suma():
+def suma(a, b, c):
     c=10
     a=15
     print(a+b+c)

@@ -8,28 +8,27 @@ menu = '''
 *********************************************
 '''
 def Rectangulo():
-    Altura=float(input("Ingrese la altura del rectangulo: "))
-    Base=float
-    Area= Altura*Base 
-    print("El area del rectangulo es: ", Area)
+    altura=float(input("Ingrese la altura del rectangulo: "))
+    base=float
+    area= altura*base 
+    print("El area del rectangulo es: ", area)
 
 def Triangulo():
-    Altura=float(input("Ingrese la altura del triangulo: "))
-    Base=float
-    Area= Altura*Base 
-    print("El area del triangulo es: ", Area)
+    altura=float(input("Ingrese la altura del triangulo: "))
+    base=float
+    area= altura*base 
+    print("El area del triangulo es: ", area)
 
 def Circulo():
-    Radio=float(input("ingrese el radio del circulo"))
-    Area= math.pi * Radio **2
-    print("El area del triangulo es: ", Area)
+    radio=float(input("ingrese el radio del circulo"))
+    area= math.pi * radio **2
+    print("El area del triangulo es: ", area)
 
 def salit():
     print("fin del programa")
     exit
 
-
-while True:
+def Menu():
     print(menu)
     opcion = int(input("ingrese una opcion: "))
     if opcion == 1:
@@ -39,8 +38,13 @@ while True:
     elif opcion == 3:
         Circulo()
     elif opcion == 4:
-        break
+        print("Fin de programa")
+        return(opcion)
 
+while True:
+    if Menu() == 4:
+        break
+    Menu()
 
 
 print("fin del programa")
